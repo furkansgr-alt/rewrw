@@ -1,0 +1,65 @@
+/* custom.css - Korkmaz İnşaat tema özelleştirmeleri */
+:root{
+    --primary:#1f2933; /* antrasit */
+    --accent:#ef7f1a; /* sıcak vurgu (turuncu) */
+    --muted:#6b7280; /* gri ton */
+    --bg:#ffffff;
+    --max-width:1200px;
+}
+body{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color:var(--primary);
+    background:var(--bg);
+}
+a{color:var(--primary);}
+header{background:#fff; border-bottom:1px solid #e6e6e6}
+#logo img{max-height:56px}
+/* Main menu */
+#mainmenu{list-style:none; margin:0; padding:0; display:flex; gap:22px; align-items:center}
+#mainmenu li{display:inline}
+#mainmenu li a{color:var(--primary); text-decoration:none; font-weight:600}
+#mainmenu li a:hover{color:var(--accent)}
+
+/* Hero */
+#section-hero-2{background:linear-gradient(180deg, rgba(31,41,51,0.85), rgba(31,41,51,0.65)), url('images/background/bg-10.jpg') center/cover no-repeat;}
+#section-hero-2 .big{font-size:48px; font-weight:700; color:#fff}
+#section-hero-2 .h2_title .text-item{color:var(--accent); font-weight:700}
+#section-hero-2 p{color:#e6eef5}
+
+/* CTA */
+.call-to-action{background:#111; color:#fff}
+.call-to-action a.btn{background:transparent; border:1px solid #fff; color:#fff}
+
+/* Cards / Projects */
+.project-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px}
+.project-card{background:#fff; border:1px solid #efefef; overflow:hidden; transition:transform .25s ease, box-shadow .25s ease}
+.project-card img{width:100%; display:block}
+.project-card .meta{padding:16px}
+.project-card:hover{transform:translateY(-6px); box-shadow:0 10px 30px rgba(31,41,51,0.12)}
+.project-card h4{margin:0 0 8px; color:var(--primary)}
+.project-card p{margin:0; color:var(--muted); font-size:14px}
+
+/* Stats */
+.stats{display:flex; gap:24px; align-items:center}
+.stat{flex:1; background:#f8fafb; padding:20px; text-align:center; border-radius:6px}
+.stat h3{font-size:28px; margin:0; color:var(--accent)}
+.stat p{margin:6px 0 0; color:var(--muted)}
+
+/* Footer */
+footer{background:#111; color:#cbd5e1; padding:40px 0}
+footer a{color:#cbd5e1}
+.footer-logos{display:flex; gap:20px; align-items:center}
+.footer-logos img{max-height:40px; opacity:0.95}
+
+/* Responsive */
+@media(max-width:992px){
+    .project-grid{grid-template-columns:repeat(2,1fr)}
+    #mainmenu{gap:12px}
+}
+@media(max-width:600px){
+    .project-grid{grid-template-columns:1fr}
+    #header .container{padding-left:12px;padding-right:12px}
+}
+
+/* Simple utility */
+.container{max-width:var(--max-width); margin:0 auto}
